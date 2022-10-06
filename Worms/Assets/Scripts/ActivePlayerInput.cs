@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class ActivePlayerInput : MonoBehaviour
 {
@@ -11,21 +10,6 @@ public class ActivePlayerInput : MonoBehaviour
     [SerializeField] private float rotationSpeed;
     [SerializeField] private float jumpForce;
 
-    //[SerializeField] private float speedH = 2.0f;
-    //[SerializeField] private float speedV = 2.0f;
-    //[SerializeField] private Camera characterCam;
-
-    //private float yaw = 0.0f;
-    //private float pitch = 0.0f;
-
-    //[SerializeField] private float pitchClamp = 90;
-
-    private void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (manager.PlayerCanPlay())
@@ -60,8 +44,6 @@ public class ActivePlayerInput : MonoBehaviour
             {
                 Jump();
             }
-
-            //ReadRotationInput(manager.GetCurrentPlayer());
         }
     }
 
@@ -73,14 +55,4 @@ public class ActivePlayerInput : MonoBehaviour
             manager.GetCurrentPlayer().GetComponent<Rigidbody>().AddForce(Vector3.up * jumpForce);
         }
     }
-
-    //private void ReadRotationInput(ActivePlayer currentPlayer) 
-    //{
-    //    yaw += speedH * Input.GetAxis("Mouse X");
-    //    pitch -= speedV * Input.GetAxis("Mouse Y");
-    //    pitch = Mathf.Clamp(pitch, -pitchClamp, pitchClamp);
-
-    //    characterCam.transform.localEulerAngles = new Vector3(pitch, 0.0f, 0.0f);
-    //    currentPlayer.transform.eulerAngles = new Vector3(0.0f, yaw, 0.0f);
-    //}
 }
