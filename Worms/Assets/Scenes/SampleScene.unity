@@ -1916,7 +1916,7 @@ MonoBehaviour:
   player2Cam: {fileID: 388190176}
   endCamera: {fileID: 460164662}
   gameCamera: {fileID: 694657874}
-  maxTimePerTurn: 60
+  maxTimePerTurn: 30
   timeBetweenTurns: 1
   seconds: {fileID: 1110291658}
   playerTurn: {fileID: 937890432}
@@ -1948,6 +1948,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 1947484367}
-  walkingSpeed: 5
-  rotationSpeed: 50
+  walkingSpeed: 3
+  rotationSpeed: 60
   jumpForce: 250

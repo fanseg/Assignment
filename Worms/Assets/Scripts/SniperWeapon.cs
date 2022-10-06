@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class SniperWeapon : MonoBehaviour
@@ -20,6 +19,7 @@ public class SniperWeapon : MonoBehaviour
         if (rayDelay > 0) 
         {
             rayDelay -= Time.deltaTime;
+
             if (rayDelay <= 0) 
             {
                 lineRenderer.enabled = false;
